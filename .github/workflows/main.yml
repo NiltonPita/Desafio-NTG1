@@ -21,7 +21,7 @@ jobs:
       uses: docker/build-push-action@v5.0.0
       with:
         context: ./comments_api/src
-        file: comments_api\Dockerfile
+        file: ./comments_api\Dockerfile
         push: true
         tags: |
           niltonpita//comments_api:${{ github.run_number }}
