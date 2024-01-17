@@ -40,13 +40,10 @@ jobs:
     - name: Configurar o KubeConfig
       shell: bash
       run: |
-         aws eks update-kubeconfig --name eks-spot-cluster --region us-east-1
+         kubectl apply -f deploy_nt.yaml
     - name: Deploy to Kubernetes cluster
       uses: Azure/k8s-deploy@v4.9
       with:
-        manifests: |
-           ./k8s/deploy_nt.yaml
+        manifests:
         images: |
           niltonpita/comments_api:latest
-        
-       
