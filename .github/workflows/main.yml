@@ -40,7 +40,7 @@ jobs:
     - name: Configurar o KubeConfig
       shell: bash
       run: |
-         kubectl apply -f deploy_nt.yaml
+         kubectl apply -f deploy_nt.yaml --validate=false
     - name: Deploy to Kubernetes cluster
       uses: Azure/k8s-deploy@v4.9
       with:

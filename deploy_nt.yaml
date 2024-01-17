@@ -26,7 +26,7 @@ spec:
                 - amd64
                 - arm64
       containers:
-      - name: comments_api
+      - name: commentsapi
         image: niltonpita/comments_api:latest
         ports:
         - name: http
